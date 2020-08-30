@@ -38,6 +38,10 @@ client.on('message', message =>{
         
     else if (command == 'najnowszyfilm'){
          client.commands.get('najnowszyfilm').execute(message, args);}
+    else if (command == 'komendy'){
+        client.commands.get('komendy').execute(message, args);}
+    else if (command == 'www'){
+        client.commands.get('www').execute(message, args);}
 });
 
 client.login(process.env.token)
