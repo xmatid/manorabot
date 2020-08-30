@@ -21,14 +21,6 @@ client.once('ready', () => {
     client.user.setActivity('każdy Twój ruch', { type: "WATCHING"}).catch(console.error);
 });
 
-client.on('guildMemberAdd', member =>{
-
-    const channel = member.guild.channels.find(channel => channel.name === "📃┃logi-serwera");
-    if(!channel) return;
-
-    channel.send('Witamy na serwerze MaTiDa! ${member}, przeczytaj #regulamin📃📃 naszego serwera!')
-});
-
 
 client.on('message', message =>{
    if(!message.content.startsWith(prefix) || message.author.bot)  return;  
