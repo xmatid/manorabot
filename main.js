@@ -35,6 +35,9 @@ client.on('message', message =>{
    } 
     else if (command == 'dajmirole'){
         client.commands.get('dajmirole').execute(message, args);}
+        
+    else if (command == 'najnowszyfilm'){
+         client.commands.get('najnowszyfilm').execute(message, args);}
 });
 
 client.login(process.env.token)
