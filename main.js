@@ -32,10 +32,9 @@ client.on('message', message =>{
    }
    else if (command == 'omatidzie'){
     client.commands.get('omatidzie').execute(message, args);  
-   }  else if (command == 'tajne'){
-    client.commands.get('tajne').execute(message, args);} 
+   } 
     else if (command == 'dajmirole'){
-        client.commands.get('dajmirole').execute(message, args);} 
+        client.commands.get('dajmirole').execute(message, args);}
 });
 
 client.login(process.env.token)
