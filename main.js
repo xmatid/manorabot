@@ -1,7 +1,5 @@
 const Discord = require('discord.js');
 
-const ytdl = require('ytdl-core');
-
 const client = new Discord.Client();
 
 const prefix = '-';
@@ -9,7 +7,6 @@ const prefix = '-';
 const fs = require('fs');
 
 client.commands = new Discord.Collection();
-
 
 const commandFiles = fs.readdirSync('./komendy/').filter(file => file.endsWith('.js'));
 for(const file of commandFiles){
@@ -23,6 +20,13 @@ client.once('ready', () => {
     console.log('Bot MaTiDa jest online!');
     client.user.setActivity('każdy Twój ruch', { type: "WATCHING"}).catch(console.error);
 });
+
+
+client.on('message', message =>{
+   if(!message.content.startsWith(prefix) || message.author.bot)  return;  
+
+   const args = message.content.slice(prefix.length).split(/ +/);
+   const command = args.shift().toLowerCase(); 
 
    if(command === 'youtube'){
     client.commands.get('youtube').execute(message, args);
@@ -39,6 +43,6 @@ client.once('ready', () => {
         client.commands.get('komendy').execute(message, args);}
     else if (command == 'www'){
         client.commands.get('www').execute(message, args);}
-
+});
 
 client.login(process.env.token)
