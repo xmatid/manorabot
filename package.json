@@ -1,7 +1,7 @@
 {
-  "name": "bot-matida",
+  "name": "botmatiddev",
   "version": "1.0.0",
-  "description": "",
+  "description": "Wersja Developerska Bota",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,8 +9,10 @@
   "author": "MaTiD",
   "license": "ISC",
   "dependencies": {
+    "@discordjs/opus": "^0.3.2",
     "discord.js": "^12.3.1",
-    "opusscript": "0.0.7",
+    "ffmpeg": "0.0.4",
+    "fluent-ffmpeg": "^2.1.2",
     "ytdl-core": "^3.2.2"
   }
 }
