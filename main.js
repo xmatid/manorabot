@@ -8,6 +8,8 @@ const prefix = '-';
 
 const queue = new Map();
 
+const { OpusEncoder } = require('@discordjs/opus');
+
 const fs = require('fs');
 
 client.commands = new Discord.Collection();
