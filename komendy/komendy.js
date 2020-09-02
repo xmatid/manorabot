@@ -8,6 +8,7 @@ module.exports = {
         message.channel.send("**-omatidzie =** *NAJLEPSZA KOMENDA MUSISZ WPISAĆ*");
         message.channel.send("**-youtube =** *Daje link do kanału MaTiDa na YT*");
         message.channel.send("**-www =** *Daje link do strony internetowej serwera*");
+        message.channel.send("**-hubcio** *fajna mordka, ajajajaj*");
     }
 
 }

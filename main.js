@@ -8,6 +8,8 @@ const fs = require('fs');
 
 client.commands = new Discord.Collection();
 
+const queue = new Map();
+
 const commandFiles = fs.readdirSync('./komendy/').filter(file => file.endsWith('.js'));
 for(const file of commandFiles){
     const command = require(`./komendy/${file}`);
@@ -43,6 +45,8 @@ client.on('message', message =>{
         client.commands.get('komendy').execute(message, args);}
     else if (command == 'www'){
         client.commands.get('www').execute(message, args);}
+    else if (command == 'hubcio'){
+        client.commands.get('hubcio').execute(message, args);}
 });
 client.on("message", async message => {
     if (message.author.bot) return;
@@ -70,8 +74,11 @@ client.on("message", async message => {
     } else if (message.content.startsWith(`${prefix}www`)) {
       www(message, serverQueue);
       return;
+    } else if (message.content.startsWith(`${prefix}hubcio`)) {
+      hubcio(message, serverQueue);
+      return;
     } else {
-      message.channel.send("Wpisz poprawną komendę! Jeżeli nie znasz komend, wpisz -komendy");
+      message.channel.send("**Wpisz poprawną komendę!** Jeżeli nie znasz komend, *wpisz -komendy*");
     } 
   
   });
