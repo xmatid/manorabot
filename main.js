@@ -77,6 +77,15 @@ client.on("message", async message => {
     } else if (message.content.startsWith(`${prefix}hubcio`)) {
       hubcio(message, serverQueue);
       return;
+    } else if (message.content.startsWith(`${prefix}play`)) {
+      play(message, serverQueue);
+      return;
+    } else if (message.content.startsWith(`${prefix}skip`)) {
+      skip(message, serverQueue);
+      return;
+    } else if (message.content.startsWith(`${prefix}stop`)) {
+      stop(message, serverQueue);
+      return;
     } else {
       message.channel.send("**Wpisz poprawną komendę!** Jeżeli nie znasz komend, *wpisz -komendy*");
     } 
