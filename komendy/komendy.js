@@ -9,7 +9,6 @@ module.exports = {
         message.channel.send("**-youtube =** *Daje link do kanału MaTiDa na YT*");
         message.channel.send("**-www =** *Daje link do strony internetowej serwera*");
         message.channel.send("**-hubcio** *fajna mordka, ajajajaj*");
-        message.channel.send("**-poka** *Pokazuje awatara danego użytkownika*");
     }
 
 }

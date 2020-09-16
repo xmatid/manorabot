@@ -46,9 +46,7 @@ client.on('message', message =>{
     else if (command == 'www'){
         client.commands.get('www').execute(message, args);}
     else if (command == 'hubcio'){
-        client.commands.get('hubcio').execute(message, args);}
-    else if (command == 'poka'){
-        client.commands.get('poka').execute(message, args);}    
+        client.commands.get('hubcio').execute(message, args);}  
 });
 client.on("message", async message => {
     if (message.author.bot) return;
@@ -87,9 +85,6 @@ client.on("message", async message => {
       return;
     } else if (message.content.startsWith(`${prefix}stop`)) {
       stop(message, serverQueue);
-      return;
-    } else if (message.content.startsWith(`${prefix}poka`)) {
-      poka(message, serverQueue);
       return;
     } else {
       message.channel.send("**Wpisz poprawną komendę!** Jeżeli nie znasz komend, *wpisz -komendy*");
