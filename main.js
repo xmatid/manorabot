@@ -12,7 +12,7 @@ const fs = require('fs');
 
 client.commands = new Discord.Collection();
 
-const token = 'NzQ5NTk2OTk4MjEwMDI3NTkx.X0uSmw.wuUuhcIdrW8uwodylI9L_6UlAIY'
+const token = 'NzQ5NTk2OTk4MjEwMDI3NTkx.X0uSmw.oN3tfvUOkvcTKd9oN1wLoZccXlk'
 
 const commandFiles = fs.readdirSync('./komendy/').filter(file => file.endsWith('.js'));
 for(const file of commandFiles){
